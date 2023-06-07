@@ -304,7 +304,7 @@ img {
 }
 
 .social .social-list {
-  column-gap: 24px;
+  column-gap: 16px;
 }
 
 .social .social-link:hover,
