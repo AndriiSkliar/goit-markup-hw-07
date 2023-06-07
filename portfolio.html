@@ -23,17 +23,17 @@
   <body>
     <div class="wrapper">
       <header class="page-header">
-        <div class="container">
-          <nav class="nav position">
+        <div class="container page-header-container">
+          <nav class="nav">
             <a href="./index.html" class="logo link"
               >Web<span class="accent">Studio</span></a
             >
-            <ul class="list position">
+            <ul class="menu-header list">
               <li class="list-item">
                 <a href="./index.html" class="nav-link link">Studio</a>
               </li>
               <li class="list-item">
-                <a href="./portfolio.html" class="nav-link link current-page"
+                <a href="./portfolio.html" class="nav-link link current"
                   >Portfolio</a
                 >
               </li>
@@ -42,20 +42,93 @@
               </li>
             </ul>
           </nav>
+          <button class="mobile-menu-open-btn js-open-menu" type="button">
+            <svg class="mobile-menu-btn" width="32" height="22">
+              <use href="./images/icons.svg#icon-header-menu-btn"></use>
+            </svg>
+          </button>
           <address class="connect">
-            <ul class="list position">
-              <li class="list-item">
+            <ul class="list connect-list">
+              <li class="connect-item">
                 <a href="mailto:info@devstudio.com" class="connect-link link"
                   >info@devstudio.com</a
                 >
               </li>
-              <li class="list-item">
+              <li class="connect-item">
                 <a href="tel:+110001111111" class="connect-link link"
                   >+11 (000) 111-11-11</a
                 >
               </li>
             </ul>
           </address>
+        </div>
+        <div class="mobile-menu js-menu-container">
+          <div class="container mobile-menu-container">
+            <button class="mobile-menu-close-btn js-close-menu">
+              <svg class="mobile-menu-close-icon" width="8" height="8">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <ul class="list mobile-menu-list">
+              <li class="mobile-menu-item">
+                <a href="./index.html" class="link">Studio</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a href="./portfolio.html" class="link current">Portfolio</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a href="" class="link">Contacts</a>
+              </li>
+            </ul>
+            <div class="mobile-menu-address">
+              <ul class="list mobile-menu-address-list">
+                <li class="mobile-menu-address-item">
+                  <a
+                    href="tel:+110001111111"
+                    class="mobile-menu-address-link link"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="mobile-menu-address-item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="mobile-menu-address-link link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="list social-list">
+                <li class="social-item">
+                  <a href="" class="social-link">
+                    <svg class="social-icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a href="" class="social-link">
+                    <svg class="social-icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a href="" class="social-link">
+                    <svg class="social-icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a href="" class="social-link">
+                    <svg class="social-icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </header>
       <main>
@@ -83,12 +156,70 @@
               <li class="work-card">
                 <a href="" class="link">
                   <div class="work-wrapper">
-                    <img
-                      src="./images/banking-app.jpg"
-                      alt="banking app"
-                      width="360"
-                      height="300"
-                    />
+                    <picture>
+                      <!-- DESKTOP -->
+                      <source
+                        srcset="
+                          ./images/desktop-banking-app.webp    1x,
+                          ./images/desktop-banking-app@2x.webp 2x
+                        "
+                        media="(min-width: 1158px)"
+                        type="image/webp"
+                        width="360"
+                        height="300"
+                      />
+                      <source
+                        srcset="
+                          ./images/desktop-banking-app.jpg    1x,
+                          ./images/desktop-banking-app@2x.jpg 2x
+                        "
+                        media="(min-width: 1158px)"
+                        width="360"
+                        height="300"
+                      />
+                      <!-- TABLET -->
+                      <source
+                        srcset="
+                          ./images/tablet-banking-app.webp    1x,
+                          ./images/tablet-banking-app@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                        width="356"
+                        height="300"
+                      />
+                      <source
+                        srcset="
+                          ./images/tablet-banking-app.jpg    1x,
+                          ./images/tablet-banking-app@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        width="356"
+                        height="300"
+                      />
+                      <!-- MOBILE -->
+                      <source
+                        srcset="
+                          ./images/mobile-banking-app.webp    1x,
+                          ./images/mobile-banking-app@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/mobile-banking-app        1x,
+                          ./images/mobile-banking-app@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/mobile-banking-app.jpg"
+                        alt="girl with phone"
+                        width="396"
+                        height="280"
+                      />
+                    </picture>
                     <p class="overlay">
                       14 Stylish and User-Friendly App Design Concepts · Task
                       Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -96,20 +227,80 @@
                     </p>
                   </div>
                   <div class="work-container">
-                    <h2 class="caption">Banking App Interface Concept</h2>
-                    <p class="text">App</p>
+                    <h2 class="work-card-caption">
+                      Banking App Interface Concept
+                    </h2>
+                    <p class="work-card-text">App</p>
                   </div>
                 </a>
               </li>
               <li class="work-card">
                 <a href="" class="link">
                   <div class="work-wrapper">
-                    <img
-                      src="./images/cashless-payment.jpg"
-                      alt="cashless payment"
-                      width="360"
-                      height="300"
-                    />
+                    <picture>
+                      <!-- DESKTOP -->
+                      <source
+                        srcset="
+                          ./images/desktop-cashless-payment.webp    1x,
+                          ./images/desktop-cashless-payment@2x.webp 2x
+                        "
+                        media="(min-width: 1158px)"
+                        type="image/webp"
+                        width="360"
+                        height="300"
+                      />
+                      <source
+                        srcset="
+                          ./images/desktop-cashless-payment.jpg    1x,
+                          ./images/desktop-cashless-payment@2x.jpg 2x
+                        "
+                        media="(min-width: 1158px)"
+                        width="360"
+                        height="300"
+                      />
+                      <!-- TABLET -->
+                      <source
+                        srcset="
+                          ./images/tablet-cashless-payment.webp    1x,
+                          ./images/tablet-cashless-payment@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                        width="356"
+                        height="300"
+                      />
+                      <source
+                        srcset="
+                          ./images/tablet-cashless-payment.jpg    1x,
+                          ./images/tablet-cashless-payment@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        width="356"
+                        height="300"
+                      />
+                      <!-- MOBILE -->
+                      <source
+                        srcset="
+                          ./images/mobile-cashless-payment.webp    1x,
+                          ./images/mobile-cashless-payment@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/mobile-cashless-payment        1x,
+                          ./images/mobile-cashless-payment@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/mobile-cashless-payment.jpg"
+                        alt="cashless payment"
+                        width="396"
+                        height="280"
+                      />
+                    </picture>
                     <p class="overlay">
                       14 Stylish and User-Friendly App Design Concepts · Task
                       Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -117,20 +308,78 @@
                     </p>
                   </div>
                   <div class="work-container">
-                    <h2 class="caption">Cashless Payment</h2>
-                    <p class="text">Marketing</p>
+                    <h2 class="work-card-caption">Cashless Payment</h2>
+                    <p class="work-card-text">Marketing</p>
                   </div>
                 </a>
               </li>
               <li class="work-card">
                 <a href="" class="link">
                   <div class="work-wrapper">
-                    <img
-                      src="./images/meditation-app.jpg"
-                      alt="meditation app"
-                      width="360"
-                      height="300"
-                    />
+                    <picture>
+                      <!-- DESKTOP -->
+                      <source
+                        srcset="
+                          ./images/desktop-meditation-app.webp    1x,
+                          ./images/desktop-meditation-app@2x.webp 2x
+                        "
+                        media="(min-width: 1158px)"
+                        type="image/webp"
+                        width="360"
+                        height="300"
+                      />
+                      <source
+                        srcset="
+                          ./images/desktop-meditation-app.jpg    1x,
+                          ./images/desktop-meditation-app@2x.jpg 2x
+                        "
+                        media="(min-width: 1158px)"
+                        width="360"
+                        height="300"
+                      />
+                      <!-- TABLET -->
+                      <source
+                        srcset="
+                          ./images/tablet-meditation-app.webp    1x,
+                          ./images/tablet-meditation-app@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                        width="356"
+                        height="300"
+                      />
+                      <source
+                        srcset="
+                          ./images/tablet-meditation-app.jpg    1x,
+                          ./images/tablet-meditation-app@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        width="356"
+                        height="300"
+                      />
+                      <!-- MOBILE -->
+                      <source
+                        srcset="
+                          ./images/mobile-meditation-app.webp    1x,
+                          ./images/mobile-meditation-app@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/mobile-meditation-app        1x,
+                          ./images/mobile-meditation-app@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/mobile-meditation-app.jpg"
+                        alt="meditation app"
+                        width="396"
+                        height="280"
+                      />
+                    </picture>
                     <p class="overlay">
                       14 Stylish and User-Friendly App Design Concepts · Task
                       Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -138,20 +387,78 @@
                     </p>
                   </div>
                   <div class="work-container">
-                    <h2 class="caption">Meditation App</h2>
-                    <p class="text">App</p>
+                    <h2 class="work-card-caption">Meditation App</h2>
+                    <p class="work-card-text">App</p>
                   </div>
                 </a>
               </li>
               <li class="work-card">
                 <a href="" class="link">
                   <div class="work-wrapper">
-                    <img
-                      src="./images/taxi-service.jpg"
-                      alt="taxi service"
-                      width="360"
-                      height="300"
-                    />
+                    <picture>
+                      <!-- DESKTOP -->
+                      <source
+                        srcset="
+                          ./images/desktop-taxi-service.webp    1x,
+                          ./images/desktop-taxi-service@2x.webp 2x
+                        "
+                        media="(min-width: 1158px)"
+                        type="image/webp"
+                        width="360"
+                        height="300"
+                      />
+                      <source
+                        srcset="
+                          ./images/desktop-taxi-service.jpg    1x,
+                          ./images/desktop-taxi-service@2x.jpg 2x
+                        "
+                        media="(min-width: 1158px)"
+                        width="360"
+                        height="300"
+                      />
+                      <!-- TABLET -->
+                      <source
+                        srcset="
+                          ./images/tablet-taxi-service.webp    1x,
+                          ./images/tablet-taxi-service@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                        width="356"
+                        height="300"
+                      />
+                      <source
+                        srcset="
+                          ./images/tablet-taxi-service.jpg    1x,
+                          ./images/tablet-taxi-service@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        width="356"
+                        height="300"
+                      />
+                      <!-- MOBILE -->
+                      <source
+                        srcset="
+                          ./images/mobile-taxi-service.webp    1x,
+                          ./images/mobile-taxi-service@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/mobile-taxi-service        1x,
+                          ./images/mobile-taxi-service@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/mobile-taxi-service.jpg"
+                        alt="taxi service"
+                        width="396"
+                        height="280"
+                      />
+                    </picture>
                     <p class="overlay">
                       14 Stylish and User-Friendly App Design Concepts · Task
                       Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -159,20 +466,78 @@
                     </p>
                   </div>
                   <div class="work-container">
-                    <h2 class="caption">Taxi Service</h2>
-                    <p class="text">Marketing</p>
+                    <h2 class="work-card-caption">Taxi Service</h2>
+                    <p class="work-card-text">Marketing</p>
                   </div>
                 </a>
               </li>
               <li class="work-card">
                 <a href="" class="link">
                   <div class="work-wrapper">
-                    <img
-                      src="./images/screen-illustrations.jpg"
-                      alt="screen illustrations"
-                      width="360"
-                      height="300"
-                    />
+                    <picture>
+                      <!-- DESKTOP -->
+                      <source
+                        srcset="
+                          ./images/desktop-screen-illustrations.webp    1x,
+                          ./images/desktop-screen-illustrations@2x.webp 2x
+                        "
+                        media="(min-width: 1158px)"
+                        type="image/webp"
+                        width="360"
+                        height="300"
+                      />
+                      <source
+                        srcset="
+                          ./images/desktop-screen-illustrations.jpg    1x,
+                          ./images/desktop-screen-illustrations@2x.jpg 2x
+                        "
+                        media="(min-width: 1158px)"
+                        width="360"
+                        height="300"
+                      />
+                      <!-- TABLET -->
+                      <source
+                        srcset="
+                          ./images/tablet-screen-illustrations.webp    1x,
+                          ./images/tablet-screen-illustrations@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                        width="356"
+                        height="300"
+                      />
+                      <source
+                        srcset="
+                          ./images/tablet-screen-illustrations.jpg    1x,
+                          ./images/tablet-screen-illustrations@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        width="356"
+                        height="300"
+                      />
+                      <!-- MOBILE -->
+                      <source
+                        srcset="
+                          ./images/mobile-screen-illustrations.webp    1x,
+                          ./images/mobile-screen-illustrations@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/mobile-screen-illustrations        1x,
+                          ./images/mobile-screen-illustrations@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/mobile-screen-illustrations.jpg"
+                        alt="screen illustrations"
+                        width="396"
+                        height="280"
+                      />
+                    </picture>
                     <p class="overlay">
                       14 Stylish and User-Friendly App Design Concepts · Task
                       Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -180,20 +545,78 @@
                     </p>
                   </div>
                   <div class="work-container">
-                    <h2 class="caption">Screen Illustrations</h2>
-                    <p class="text">Design</p>
+                    <h2 class="work-card-caption">Screen Illustrations</h2>
+                    <p class="work-card-text">Design</p>
                   </div>
                 </a>
               </li>
               <li class="work-card">
                 <a href="" class="link">
                   <div class="work-wrapper">
-                    <img
-                      src="./images/girl-with-phone.jpg"
-                      alt="girl with phone"
-                      width="360"
-                      height="300"
-                    />
+                    <picture>
+                      <!-- DESKTOP -->
+                      <source
+                        srcset="
+                          ./images/desktop-girl-with-phone.webp    1x,
+                          ./images/desktop-girl-with-phone@2x.webp 2x
+                        "
+                        media="(min-width: 1158px)"
+                        type="image/webp"
+                        width="360"
+                        height="300"
+                      />
+                      <source
+                        srcset="
+                          ./images/desktop-girl-with-phone.jpg    1x,
+                          ./images/desktop-girl-with-phone@2x.jpg 2x
+                        "
+                        media="(min-width: 1158px)"
+                        width="360"
+                        height="300"
+                      />
+                      <!-- TABLET -->
+                      <source
+                        srcset="
+                          ./images/tablet-girl-with-phone.webp    1x,
+                          ./images/tablet-girl-with-phone@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                        width="356"
+                        height="300"
+                      />
+                      <source
+                        srcset="
+                          ./images/tablet-girl-with-phone.jpg    1x,
+                          ./images/tablet-girl-with-phone@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        width="356"
+                        height="300"
+                      />
+                      <!-- MOBILE -->
+                      <source
+                        srcset="
+                          ./images/mobile-girl-with-phone.webp    1x,
+                          ./images/mobile-girl-with-phone@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/mobile-girl-with-phone        1x,
+                          ./images/mobile-girl-with-phone@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/mobile-girl-with-phone.jpg"
+                        alt="girl with phone"
+                        width="396"
+                        height="280"
+                      />
+                    </picture>
                     <p class="overlay">
                       14 Stylish and User-Friendly App Design Concepts · Task
                       Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -201,20 +624,78 @@
                     </p>
                   </div>
                   <div class="work-container">
-                    <h2 class="caption">Online Courses</h2>
-                    <p class="text">Marketing</p>
+                    <h2 class="work-card-caption">Online Courses</h2>
+                    <p class="work-card-text">Marketing</p>
                   </div>
                 </a>
               </li>
               <li class="work-card">
                 <a href="" class="link">
                   <div class="work-wrapper">
-                    <img
-                      src="./images/smart-technologies.jpg"
-                      alt="smart technologies"
-                      width="360"
-                      height="300"
-                    />
+                    <picture>
+                      <!-- DESKTOP -->
+                      <source
+                        srcset="
+                          ./images/desktop-smart-technologies.webp    1x,
+                          ./images/desktop-smart-technologies@2x.webp 2x
+                        "
+                        media="(min-width: 1158px)"
+                        type="image/webp"
+                        width="360"
+                        height="300"
+                      />
+                      <source
+                        srcset="
+                          ./images/desktop-smart-technologies.jpg    1x,
+                          ./images/desktop-smart-technologies@2x.jpg 2x
+                        "
+                        media="(min-width: 1158px)"
+                        width="360"
+                        height="300"
+                      />
+                      <!-- TABLET -->
+                      <source
+                        srcset="
+                          ./images/tablet-smart-technologies.webp    1x,
+                          ./images/tablet-smart-technologies@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                        width="356"
+                        height="300"
+                      />
+                      <source
+                        srcset="
+                          ./images/tablet-smart-technologies.jpg    1x,
+                          ./images/tablet-smart-technologies@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        width="356"
+                        height="300"
+                      />
+                      <!-- MOBILE -->
+                      <source
+                        srcset="
+                          ./images/mobile-smart-technologies.webp    1x,
+                          ./images/mobile-smart-technologies@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/mobile-smart-technologies        1x,
+                          ./images/mobile-smart-technologies@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/mobile-smart-technologies.jpg"
+                        alt="smart technologies"
+                        width="396"
+                        height="280"
+                      />
+                    </picture>
                     <p class="overlay">
                       14 Stylish and User-Friendly App Design Concepts · Task
                       Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -222,20 +703,78 @@
                     </p>
                   </div>
                   <div class="work-container">
-                    <h2 class="caption">Instagram Stories Concept</h2>
-                    <p class="text">Design</p>
+                    <h2 class="work-card-caption">Instagram Stories Concept</h2>
+                    <p class="work-card-text">Design</p>
                   </div>
                 </a>
               </li>
               <li class="work-card">
                 <a href="" class="link">
                   <div class="work-wrapper">
-                    <img
-                      src="./images/woman-with-food.jpg"
-                      alt="woman with food"
-                      width="360"
-                      height="300"
-                    />
+                    <picture>
+                      <!-- DESKTOP -->
+                      <source
+                        srcset="
+                          ./images/desktop-woman-with-food.webp    1x,
+                          ./images/desktop-woman-with-food@2x.webp 2x
+                        "
+                        media="(min-width: 1158px)"
+                        type="image/webp"
+                        width="360"
+                        height="300"
+                      />
+                      <source
+                        srcset="
+                          ./images/desktop-woman-with-food.jpg    1x,
+                          ./images/desktop-woman-with-food@2x.jpg 2x
+                        "
+                        media="(min-width: 1158px)"
+                        width="360"
+                        height="300"
+                      />
+                      <!-- TABLET -->
+                      <source
+                        srcset="
+                          ./images/tablet-woman-with-food.webp    1x,
+                          ./images/tablet-woman-with-food@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                        width="356"
+                        height="300"
+                      />
+                      <source
+                        srcset="
+                          ./images/tablet-woman-with-food.jpg    1x,
+                          ./images/tablet-woman-with-food@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        width="356"
+                        height="300"
+                      />
+                      <!-- MOBILE -->
+                      <source
+                        srcset="
+                          ./images/mobile-woman-with-food.webp    1x,
+                          ./images/mobile-woman-with-food@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/mobile-woman-with-food        1x,
+                          ./images/mobile-woman-with-food@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/mobile-woman-with-food.jpg"
+                        alt="woman with food"
+                        width="396"
+                        height="280"
+                      />
+                    </picture>
                     <p class="overlay">
                       14 Stylish and User-Friendly App Design Concepts · Task
                       Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -243,20 +782,78 @@
                     </p>
                   </div>
                   <div class="work-container">
-                    <h2 class="caption">Organic Food</h2>
-                    <p class="text">Web Site</p>
+                    <h2 class="work-card-caption">Organic Food</h2>
+                    <p class="work-card-text">Web Site</p>
                   </div>
                 </a>
               </li>
               <li class="work-card">
                 <a href="" class="link">
                   <div class="work-wrapper">
-                    <img
-                      src="./images/coffee-decoration.jpg"
-                      alt="coffee decoration"
-                      width="360"
-                      height="300"
-                    />
+                    <picture>
+                      <!-- DESKTOP -->
+                      <source
+                        srcset="
+                          ./images/desktop-coffee-decoration.webp    1x,
+                          ./images/desktop-coffee-decoration@2x.webp 2x
+                        "
+                        media="(min-width: 1158px)"
+                        type="image/webp"
+                        width="360"
+                        height="300"
+                      />
+                      <source
+                        srcset="
+                          ./images/desktop-coffee-decoration.jpg    1x,
+                          ./images/desktop-coffee-decoration@2x.jpg 2x
+                        "
+                        media="(min-width: 1158px)"
+                        width="360"
+                        height="300"
+                      />
+                      <!-- TABLET -->
+                      <source
+                        srcset="
+                          ./images/tablet-coffee-decoration.webp    1x,
+                          ./images/tablet-coffee-decoration@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                        width="356"
+                        height="300"
+                      />
+                      <source
+                        srcset="
+                          ./images/tablet-coffee-decoration.jpg    1x,
+                          ./images/tablet-coffee-decoration@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        width="356"
+                        height="300"
+                      />
+                      <!-- MOBILE -->
+                      <source
+                        srcset="
+                          ./images/mobile-coffee-decoration.webp    1x,
+                          ./images/mobile-coffee-decoration@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/mobile-coffee-decoration        1x,
+                          ./images/mobile-coffee-decoration@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/mobile-coffee-decoration.jpg"
+                        alt="coffee decoration"
+                        width="396"
+                        height="280"
+                      />
+                    </picture>
                     <p class="overlay">
                       14 Stylish and User-Friendly App Design Concepts · Task
                       Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -264,8 +861,8 @@
                     </p>
                   </div>
                   <div class="work-container">
-                    <h2 class="caption">Fresh Coffee</h2>
-                    <p class="text">Web Site</p>
+                    <h2 class="work-card-caption">Fresh Coffee</h2>
+                    <p class="work-card-text">Web Site</p>
                   </div>
                 </a>
               </li>
@@ -286,31 +883,31 @@
           </div>
           <div class="social">
             <p class="social-text">Social media</p>
-            <ul class="section-list">
-              <li class="team-item">
-                <a href="" class="section-link">
-                  <svg class="section-icon" width="24" height="24">
+            <ul class="social-list list">
+              <li class="social-item">
+                <a href="" class="social-link">
+                  <svg class="social-icon" width="24" height="24">
                     <use href="./images/icons.svg#icon-instagram"></use>
                   </svg>
                 </a>
               </li>
-              <li class="team-item">
-                <a href="" class="section-link">
-                  <svg class="section-icon" width="24" height="24">
+              <li class="social-item">
+                <a href="" class="social-link">
+                  <svg class="social-icon" width="24" height="24">
                     <use href="./images/icons.svg#icon-twitter"></use>
                   </svg>
                 </a>
               </li>
-              <li class="team-item">
-                <a href="" class="section-link">
-                  <svg class="section-icon" width="24" height="24">
+              <li class="social-item">
+                <a href="" class="social-link">
+                  <svg class="social-icon" width="24" height="24">
                     <use href="./images/icons.svg#icon-facebook"></use>
                   </svg>
                 </a>
               </li>
-              <li class="team-item">
-                <a href="" class="section-link">
-                  <svg class="section-icon" width="24" height="24">
+              <li class="social-item">
+                <a href="" class="social-link">
+                  <svg class="social-icon" width="24" height="24">
                     <use href="./images/icons.svg#icon-linkedin"></use>
                   </svg>
                 </a>
@@ -338,5 +935,12 @@
         </div>
       </footer>
     </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
