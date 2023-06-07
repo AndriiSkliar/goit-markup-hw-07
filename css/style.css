@@ -830,8 +830,11 @@ img {
   .customers-list {
     column-gap: 16px;
   }
+  .customers-item {
+    flex-basis: calc((100% - 16px) / 2);
+  }
   .customers-link {
-    width: 190px;
+    max-width: 190px;
   }
   .basement-container,
   .social,
