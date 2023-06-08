@@ -308,7 +308,9 @@ img {
 }
 
 .social .social-link:hover,
-.social .social-link:focus {
+.social .social-link:focus,
+.subscribe-submit:hover,
+.subscribe-submit:focus {
   background-color: #31d0aa;
 }
 
@@ -324,17 +326,22 @@ img {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 16px;
-  opacity: 0.3;
   color: var(--background-color);
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: border-color var(--transition-duration-and-func);
+}
+
+.subscribe-input:focus,
+.subscribe-input:hover {
+  border-color: #31d0aa;
+  outline: transparent;
 }
 
 .subscribe-input::placeholder {
   color: inherit;
-  opacity: 0.6;
 }
 
 .subscribe-submit {
@@ -356,11 +363,6 @@ img {
   justify-content: center;
   align-items: center;
   transition: background-color var(--transition-duration-and-func);
-}
-
-.subscribe-submit:hover,
-.subscribe-submit:focus {
-  background-color: var(--btn-color);
 }
 
 .subscribe-icon {
@@ -864,6 +866,11 @@ img {
     row-gap: 16px;
     margin-bottom: 48px;
   }
+  .work-card-img {
+    max-width: 100%;
+    height: auto;
+  }
+
   .radio-btn {
     padding: 8px 16px;
   }
