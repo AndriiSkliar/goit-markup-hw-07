@@ -504,8 +504,7 @@ img {
 .signup_form-checkbox:checked + .user-privacy .user-privacy-text {
   background-color: var(--btn-color);
   border: none;
-  fill: var(--header-color);
-  border-color: var(--btn-color);
+  fill: var(--footer-color);
 }
 
 .user-privacy {
